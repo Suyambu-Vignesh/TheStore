@@ -6,9 +6,9 @@ import com.app.thestore.shelf.data.model.ShelfProduct
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.withContext
-import java.lang.Exception
+import kotlinx.coroutines.flow.flowOn
 
 class DefaultShelfRepository(
     private val dataSource: ShelfDataSource = getShelfDataSource(),
@@ -16,14 +16,14 @@ class DefaultShelfRepository(
 ) : ShelfRepository {
     override suspend fun getProducts(): Flow<Result<List<ShelfProduct>>> {
         return flow {
-            withContext(ioDispatcher) {
-                try {
-                    val result = dataSource.getProducts()
-                    emit(Result.success(result))
-                } catch (exe: Exception) {
-                    emit(Result.failure(exe))
-                }
-            }
-        }
+            emit(dataSource.getProducts().toResult())
+        }.catch { exe -> Result.failure<List<ShelfProduct>>(exe) }.flowOn(ioDispatcher)
     }
+}
+
+private fun List<ShelfProduct>.toResult(): Result<List<ShelfProduct>> {
+    if (this.isEmpty()) {
+
+    }
+    return Result.success(this)
 }

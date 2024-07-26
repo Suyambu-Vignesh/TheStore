@@ -1,4 +1,4 @@
-package com.app.thestore.core.principles.api
+package com.app.thestore.core.api
 
 interface Apis {
 

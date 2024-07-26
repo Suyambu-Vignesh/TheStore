@@ -1,10 +1,10 @@
 package com.app.thestore.cart
 
 import androidx.fragment.app.Fragment
-import com.app.thestore.core.principles.api.FeatureExternalApi
+import com.app.thestore.core.api.FeaturePublicApi
 import com.app.thestore.shelf.data.model.ShelfProduct
 
-interface CartExternalApi : FeatureExternalApi {
+interface CartPublicApi : FeaturePublicApi {
     /**
      * Method to return the starting point of cart Flow, Use this if needed to avoid the
      * nav graph

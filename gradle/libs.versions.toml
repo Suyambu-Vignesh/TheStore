@@ -1,10 +1,12 @@
 [versions]
 activity = "1.9.0"
+adapterDelgate = "4.3.2"
 agp = "8.4.2"
 appcompat = "1.7.0"
 constraintlayout = "2.1.4"
 coreKtx = "1.13.1"
 espressoCore = "3.6.1"
+glide = "4.16.0"
 googleTruth = "1.4.3"
 ioMockk = "1.13.11"
 junit = "4.13.2"
@@ -13,11 +15,18 @@ lifecycleVersion = "2.8.3"
 klint = "12.1.1"
 kotlin = "2.0.0"
 kotlinCoroutine = "1.9.0-RC"
+ksp = "1.8.10-1.0.9"
 material = "1.12.0"
 retrofit = "2.11.0"
 retrofitMoshi = "2.9.0"
+roomVersion = "2.6.1"
+navigationFragmentKtx = "2.7.7"
+navigationSafeArgs = "2.7.7"
+navigationUiKtx = "2.7.7"
+startupRuntime = "1.1.1"
 
 [libraries]
+adapter-delegate = { group = "com.hannesdorfmann", name = "adapterdelegates4-kotlin-dsl-viewbinding", version.ref = "adapterDelgate" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -25,16 +34,26 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 google-truth = { group = "com.google.truth", name = "truth", version.ref = "googleTruth" }
-iomockk = { group = "io.mockk", name = "mockk", version.ref = "ioMockk"}
+iomockk = { group = "io.mockk", name = "mockk", version.ref = "ioMockk" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
-koltin-coroutines = { group = "org.jetbrains.kotlinx", name="kotlinx-coroutines-test", version.ref = "kotlinCoroutine"}
+koltin-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinCoroutine" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref="retrofit" }
-retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref="retrofitMoshi"}
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofitMoshi" }
+room-ksp-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+androidx-startup-runtime = { group = "androidx.startup", name = "startup-runtime", version.ref = "startupRuntime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint"}
+klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+navigation-safeagrs = { id = "androidx.navigation.safeargs", version.ref = "navigationSafeArgs" }
+
 

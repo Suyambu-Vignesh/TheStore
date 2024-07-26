@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/shelf_navigation">
+    android:id="@+id/shelf_navigation"
+    app:startDestination="@id/fragment_shelf_products">
+
+    <fragment
+        android:id="@+id/fragment_products_details"
+        android:name="com.app.thestore.shelf.ui.view.ShelfDetailFragment">
+
+        <argument
+            android:name="selectedIndex"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_shelf_products"
+        android:name="com.app.thestore.shelf.ui.view.ShelfFragment">
+
+        <action
+            android:id="@+id/action_shelf_to_details"
+            app:destination="@id/fragment_products_details">
+
+            <argument
+                android:name="selectedIndex"
+                app:argType="integer" />
+
+        </action>
+
+    </fragment>
 
 </navigation>

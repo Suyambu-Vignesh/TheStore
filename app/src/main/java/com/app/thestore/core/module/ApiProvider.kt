@@ -1,9 +1,9 @@
-package com.app.thestore.core.principles.module
+package com.app.thestore.core.module
 
-import com.app.thestore.core.principles.api.Apis
-import com.app.thestore.core.principles.api.FeaturePublicApi
-import com.app.thestore.core.principles.api.CoreApi
-import com.app.thestore.core.principles.api.FeatureApi
+import com.app.thestore.core.api.Apis
+import com.app.thestore.core.api.FeaturePublicApi
+import com.app.thestore.core.api.CoreApi
+import com.app.thestore.core.api.FeatureApi
 
 /**
  * Helper focus on resolving the API

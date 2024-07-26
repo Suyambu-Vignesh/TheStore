@@ -1,9 +1,9 @@
-package com.app.thestore.core.principles.module
+package com.app.thestore.core.module
 
 import android.app.Application
 import android.content.Context
-import com.app.thestore.core.principles.api.ApiRegistry
-import com.app.thestore.core.principles.core.Tagged
+import com.app.thestore.core.api.ApiRegistry
+import com.app.thestore.core.core.Tagged
 
 interface Module : Tagged {
 

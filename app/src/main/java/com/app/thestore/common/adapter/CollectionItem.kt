@@ -1,4 +1,4 @@
-package com.app.thestore.core.adapter
+package com.app.thestore.common.adapter
 
 interface CollectionItem {
 }

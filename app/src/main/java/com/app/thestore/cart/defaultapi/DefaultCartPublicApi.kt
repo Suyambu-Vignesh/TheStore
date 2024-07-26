@@ -1,4 +1,4 @@
-package com.app.thestore.cart.api
+package com.app.thestore.cart.defaultapi
 
 import androidx.fragment.app.Fragment
 import com.app.thestore.cart.CartPrivateApi

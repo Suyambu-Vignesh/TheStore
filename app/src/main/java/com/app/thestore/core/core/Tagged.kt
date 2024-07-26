@@ -1,4 +1,4 @@
-package com.app.thestore.core.principles.core
+package com.app.thestore.core.core
 
 /**
  * Interface, that will be implemented by delegation, that need proper human readable tag.

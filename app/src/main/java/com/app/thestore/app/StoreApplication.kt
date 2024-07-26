@@ -1,4 +1,4 @@
-package com.app.thestore
+package com.app.thestore.app
 
 import android.app.Application
 

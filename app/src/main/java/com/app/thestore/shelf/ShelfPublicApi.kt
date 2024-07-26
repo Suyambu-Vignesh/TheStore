@@ -1,9 +1,9 @@
 package com.app.thestore.shelf
 
 import androidx.fragment.app.Fragment
-import com.app.thestore.core.principles.api.FeatureExternalApi
+import com.app.thestore.core.api.FeaturePublicApi
 
-interface ShelfExternalApi : FeatureExternalApi {
+interface ShelfPublicApi : FeaturePublicApi {
 
     /**
      * Method that provide the starting point of the Shelf

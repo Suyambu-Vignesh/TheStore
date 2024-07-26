@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.klint)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.navigation.safeagrs)
 }
 
 android {
@@ -52,8 +54,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.retrofit)
     implementation(libs.retrofit.moshi)
+    implementation(libs.room.ksp.compiler)
+    implementation(libs.room.ktx)
+    implementation(libs.room.runtime)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.startup.runtime)
 
     testImplementation(libs.junit)
     testImplementation(libs.iomockk)

@@ -1,4 +1,4 @@
-package com.app.thestore.app
+package com.app.thestore.app.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

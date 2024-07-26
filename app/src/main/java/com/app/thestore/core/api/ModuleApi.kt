@@ -1,4 +1,5 @@
 package com.app.thestore.core.api
 
-class ModuleApi {
-}
+import com.app.thestore.core.core.Tagged
+
+interface ModuleApi: Tagged
